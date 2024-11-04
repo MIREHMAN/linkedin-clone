@@ -3,7 +3,7 @@ import React from 'react'
 
 const ProfileCol = () => {
   return (
-    <Box sx={{display:{xs:'none', md:'block'}}}>ProfileCol</Box>
+    <Box flex={1} sx={{display:{xs:'none', md:'block'}}}>ProfileCol</Box>
   )
 }
 

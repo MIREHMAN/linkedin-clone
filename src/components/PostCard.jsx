@@ -3,8 +3,9 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Typograp
 import React from 'react'
 
 const PostCard = () => {
+    const RandomImage='https://picsum.photos/200'
   return (
-    <Card fullWidth sx={{mt:2}}>
+    <Card fullWidth sx={{mb:2}}>
     <CardHeader
       avatar={
         <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
@@ -16,13 +17,13 @@ const PostCard = () => {
           <MoreVert />
         
       }
-      title="Shrimp and Chorizo Paella"
-      subheader="September 14, 2016"
+      title="Jon Doe"
+      subheader="Posted September 14, 2024"
     />
     <CardMedia
       component="img"
-      height="300"
-      image="/static/images/cards/paella.jpg"
+      height='400'
+      image={RandomImage}
       alt="Paella dish"
     />
     <CardContent>

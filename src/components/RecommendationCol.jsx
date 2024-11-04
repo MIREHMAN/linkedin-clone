@@ -3,7 +3,7 @@ import React from 'react'
 
 const RecommendationCol = () => {
   return (
-    <Box sx={{display:{xs:'none', md:'block'}}}>RecommendationCol</Box>
+    <Box flex={2} sx={{display:{xs:'none', md:'block'}}}>RecommendationCol</Box>
   )
 }
 
