@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { LinkedIn, Mail, Message, Notifications } from "@mui/icons-material";
+import { LinkedIn, Mail, Notifications } from "@mui/icons-material";
 import { AppBar, Avatar, Badge, Box, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Search from "./Search";
