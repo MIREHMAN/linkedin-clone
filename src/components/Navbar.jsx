@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { LinkedIn, Mail, Message, Notifications } from "@mui/icons-material";
-import { AppBar, Avatar, Badge, Box, Toolbar, Typography } from "@mui/material";
-import React from "react";
+import { AppBar, Avatar, Badge, Box, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
 import Search from "./Search";
 
 const MyToolbar=styled(Toolbar)({
@@ -47,6 +47,7 @@ const UserBox=styled(Box)(({
 }));
 
 const Navbar = () => {
+    const [open,setOpen]=useState(false)
   return (
     <AppBar position="sticky">
       <MyToolbar>
@@ -67,10 +68,10 @@ const Navbar = () => {
             </Badge>
         </Icons>
         <Icons sx={{display:{xs:'none', md:'block'}}}>
-            <Avatar/>
+            <Avatar onClick={e=>setOpen(true)}/>
         </Icons>
         
-        <UserBox sx={{display:{xs:'flex', md:'none'}}}>
+        <UserBox onClick={e=>setOpen(true)} sx={{display:{xs:'flex', md:'none'}}}>
         <Avatar/>
         <MobileText>John Doe</MobileText>
         </UserBox>
@@ -78,6 +79,24 @@ const Navbar = () => {
       
         
       </MyToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={e=>setOpen(false)}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
