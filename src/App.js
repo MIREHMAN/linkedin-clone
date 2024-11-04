@@ -1,13 +1,14 @@
 
+import { Box } from '@mui/material';
 import Homepage from './Pages/Homepage';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div>
+    <Box>
       <Navbar/>
       <Homepage/>
-    </div>
+    </Box>
   );
 }
 

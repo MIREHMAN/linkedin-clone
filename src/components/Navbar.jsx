@@ -14,12 +14,12 @@ const Search=styled(Box)({
   
 
 });
-const Icons=styled(Box)({
+const Icons=styled(Box)(({
     display:'flex',
     backgroundColor:'white',
   
 
-});
+}));
 const Navbar = () => {
   return (
     <AppBar position="sticky">
