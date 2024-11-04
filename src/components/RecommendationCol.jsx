@@ -1,8 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const RecommendationCol = () => {
   return (
-    <div>RecommendationCol</div>
+    <Box sx={{display:{xs:'none', md:'block'}}}>RecommendationCol</Box>
   )
 }
 

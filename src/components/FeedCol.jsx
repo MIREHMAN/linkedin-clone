@@ -1,8 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const FeedCol = () => {
   return (
-    <div>FeedCol</div>
+    <Box >FeedCol</Box>
   )
 }
 
