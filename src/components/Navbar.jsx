@@ -2,18 +2,14 @@ import styled from "@emotion/styled";
 import { LinkedIn } from "@mui/icons-material";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import Search from "./Search";
 
 const MyToolbar=styled(Toolbar)({
     display:'flex',
     justifyContent:'space-between'
 });
 
-const Search=styled(Box)({
-    display:'flex',
-    backgroundColor:'white',
-  
 
-});
 const Icons=styled(Box)(({
     display:'flex',
     backgroundColor:'white',
@@ -28,7 +24,7 @@ const Navbar = () => {
         <LinkedIn /> <Typography variant="h6" sx={{display:{xs:'none', md:'block'}}}>Linkedin-Clone</Typography>
         </Box>
        
-        <Search>Search</Search>
+        <Search/>
         <Icons>Icons</Icons>
       </MyToolbar>
     </AppBar>
