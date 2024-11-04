@@ -24,6 +24,21 @@ const Icons=styled(Box)(({
   
 
 }));
+const UserBox=styled(Box)(({
+    display:'flex',
+    alignItems:'center',
+    border:'1px solid lightgray',
+    gap:2,
+    borderRadius:'16px',
+    "&:hover":{
+        backgroundColor:'ButtonShadow',
+        cursor:'pointer',
+        borderRadius:'16px'
+    }
+  
+
+}));
+
 const Navbar = () => {
   return (
     <AppBar position="sticky">
@@ -46,9 +61,12 @@ const Navbar = () => {
         </Icons>
         <Icons>
             <Avatar/>
-            
         </Icons>
-        <Typography>John Doe</Typography>
+        
+        <UserBox>
+        <Avatar/>
+        <Typography variant="span">John Doe</Typography>
+        </UserBox>
         </Box>
       
         
