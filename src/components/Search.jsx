@@ -7,15 +7,15 @@ const Searchbox = styled(Box)({
   display: "flex",
   alignItems:'center',
   backgroundColor: "white",
-  width: "30%",
-  borderRadius: "8px",
-  padding: 2,
+  width: "45%",
+  borderRadius: "12px",
+  padding: {xs:1,md:2},
 });
 const Search = () => {
   return (
     <Searchbox>
-        <SearchRounded sx={{color:'gray',pl:1}}/>
-      <InputBase sx={{pl:1}} placeholder="Search Here..."  value=''/>
+        <SearchRounded sx={{color:'gray',fontSize:"medium",pl:{xs:0,md:1}}}/>
+      <InputBase sx={{pl:{xs:0,md:1}}} placeholder="Search Here..."  value=''/>
     </Searchbox>
   );
 };
