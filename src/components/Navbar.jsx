@@ -8,6 +8,12 @@ const MyToolbar=styled(Toolbar)({
     display:'flex',
     justifyContent:'space-between'
 });
+const MobileText=styled(Typography)({
+    fontSize:'0.5rem',
+    fontWeight:600,
+    letterSpacing:'1px',
+    color:'theme'
+});
 
 
 const Icons=styled(Box)(({
@@ -16,6 +22,7 @@ const Icons=styled(Box)(({
     border:'1px solid lightgray',
     p:2,
     borderRadius:'100px',
+    
     "&:hover":{
         backgroundColor:'ButtonShadow',
         cursor:'pointer',
@@ -49,23 +56,23 @@ const Navbar = () => {
        
         <Search/>
         <Box sx={{display:'flex', alignItems:'center', gap:2}}>
-        <Icons>
+        <Icons sx={{display:{xs:'none', md:'block'}}}> 
             <Badge badgeContent={4} color="secondary">
                 <Notifications/>
             </Badge>
         </Icons>
-        <Icons>
+        <Icons sx={{display:{xs:'none', md:'block'}}}>
             <Badge badgeContent={3} color="secondary">
                 <Mail/>
             </Badge>
         </Icons>
-        <Icons>
+        <Icons sx={{display:{xs:'none', md:'block'}}}>
             <Avatar/>
         </Icons>
         
-        <UserBox>
+        <UserBox sx={{display:{xs:'flex', md:'none'}}}>
         <Avatar/>
-        <Typography variant="span">John Doe</Typography>
+        <MobileText>John Doe</MobileText>
         </UserBox>
         </Box>
       
