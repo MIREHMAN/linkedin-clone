@@ -1,4 +1,4 @@
-import { ChatBubbleOutline, Favorite, MoreHoriz,  Share } from "@mui/icons-material";
+import { ChatBubbleOutline, Favorite, FavoriteBorder, MoreHoriz,  Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -6,6 +6,7 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  Checkbox,
   Divider,
   Typography,
 } from "@mui/material";
@@ -46,12 +47,12 @@ const PostCard = () => {
       <Divider sx={{mt:1}}/>
       <CardActions >
       
-         <IconButton>
-         <Favorite />
-          </IconButton> 
+         
+         <Checkbox  icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{color:'red'}}/>} />
+          
        
         <IconButton>
-        <ChatBubbleOutline/>
+        <ChatBubbleOutline/> 
         </IconButton> 
         
         <IconButton>
