@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { LinkedIn, Mail, Notifications, SearchRounded } from "@mui/icons-material";
+import { BubbleChart, ChatBubble, ChatSharp, LinkedIn, Mail, Notifications, SearchRounded } from "@mui/icons-material";
 import { AppBar, Avatar, Badge, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Search from "./Search";
@@ -22,8 +22,8 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <MyToolbar>
-        <Box display='flex' alignItems='center'>
-        <LinkedIn /> <Typography variant="h6" sx={{display:{xs:'none', md:'block'}}}>Linkedin-Clone</Typography>
+        <Box display='flex' alignItems='center' gap={1}>
+        <BubbleChart /> <Typography variant="h6" sx={{}}>Chatty</Typography>
         </Box>
        
         <Search/>
@@ -32,7 +32,7 @@ const Navbar = () => {
         <SearchRounded/>
         </IconBox>
         <IconBox> 
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={4} variant="small" color="secondary">
                 <Notifications/>
             </Badge>
         </IconBox>
