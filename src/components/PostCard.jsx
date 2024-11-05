@@ -15,7 +15,7 @@ import IconButton from "@mui/material/IconButton";
 const PostCard = () => {
   const RandomImage = "https://picsum.photos/200";
   return (
-    <Card  sx={{mb:2, width:'100%'}} >
+    <Card  sx={{mb:1, width:'100%'}} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -34,8 +34,7 @@ const PostCard = () => {
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          together with your guests. 
         </Typography>
       </CardContent>
       <CardMedia
