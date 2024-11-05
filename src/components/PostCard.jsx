@@ -15,7 +15,7 @@ import IconButton from "@mui/material/IconButton";
 const PostCard = () => {
   const RandomImage = "https://picsum.photos/200";
   return (
-    <Card sx={{mb:2}} >
+    <Card  sx={{mb:2, width:'100%'}} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">

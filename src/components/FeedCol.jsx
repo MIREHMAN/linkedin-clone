@@ -4,7 +4,7 @@ import PostCard from './PostCard'
 
 const FeedCol = () => {
   return (
-    <Box flex={4} sx={{display:'flex', mt:2, ml:0, flexDirection:'column'}}>
+    <Box flex={4} sx={{display:'flex', flexDirection:'column'}}>
         <PostCard/>
         <PostCard/>
         <PostCard/>
