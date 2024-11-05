@@ -10,10 +10,11 @@ const Searchbox = styled(Box)({
   width: "45%",
   borderRadius: "12px",
   padding: {xs:1,md:2},
+  
 });
 const Search = () => {
   return (
-    <Searchbox>
+    <Searchbox sx={{display:{xs:'none', md:'block'}}}>
         <SearchRounded sx={{color:'gray',fontSize:"medium",pl:{xs:0,md:1}}}/>
       <InputBase sx={{pl:{xs:0,md:1}}} placeholder="Search Here..."  value=''/>
     </Searchbox>

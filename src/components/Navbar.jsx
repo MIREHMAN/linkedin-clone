@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { LinkedIn, Mail, Notifications } from "@mui/icons-material";
-import { AppBar, Avatar, Badge, Box, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import { LinkedIn, Mail, Notifications, SearchRounded } from "@mui/icons-material";
+import { AppBar, Avatar, Badge, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Search from "./Search";
 
@@ -8,43 +8,14 @@ const MyToolbar=styled(Toolbar)({
     display:'flex',
     justifyContent:'space-between'
 });
-const MobileText=styled(Typography)({
-    fontSize:'0.5rem',
-    fontWeight:600,
-    letterSpacing:'1px',
-    color:'theme'
-});
+const IconBox=styled(IconButton)({
+  border:'1px solid lightgray',
+  padding:3,
+  borderRadius:8,
+  color:'white'
+})
 
 
-const Icons=styled(Box)(({
-    display:'flex',
-    alignItems:'center',
-    border:'1px solid lightgray',
-    p:2,
-    borderRadius:'100px',
-    
-    "&:hover":{
-        backgroundColor:'ButtonShadow',
-        cursor:'pointer',
-        borderRadius:'100px'
-    }
-  
-
-}));
-const UserBox=styled(Box)(({
-    display:'flex',
-    alignItems:'center',
-    border:'1px solid lightgray',
-    gap:2,
-    borderRadius:'16px',
-    "&:hover":{
-        backgroundColor:'ButtonShadow',
-        cursor:'pointer',
-        borderRadius:'16px'
-    }
-  
-
-}));
 
 const Navbar = () => {
     const [open,setOpen]=useState(false)
@@ -56,25 +27,25 @@ const Navbar = () => {
         </Box>
        
         <Search/>
-        <Box sx={{display:'flex', alignItems:'center', gap:2}}>
-        <Icons sx={{display:{xs:'none', md:'block'}}}> 
+        <Box sx={{display:'flex', alignItems:'center', gap:1}}>
+        <IconBox>
+        <SearchRounded/>
+        </IconBox>
+        <IconBox> 
             <Badge badgeContent={4} color="secondary">
                 <Notifications/>
             </Badge>
-        </Icons>
-        <Icons sx={{display:{xs:'none', md:'block'}}}>
+        </IconBox>
+        <IconBox>
             <Badge badgeContent={3} color="secondary">
                 <Mail/>
             </Badge>
-        </Icons>
-        <Icons sx={{display:{xs:'none', md:'block'}}}>
+        </IconBox>
+        <IconButton >
             <Avatar onClick={e=>setOpen(true)}/>
-        </Icons>
+        </IconButton>
         
-        <UserBox onClick={e=>setOpen(true)} sx={{display:{xs:'flex', md:'none'}}}>
-        <Avatar/>
-        <MobileText>John Doe</MobileText>
-        </UserBox>
+       
         </Box>
       
         
