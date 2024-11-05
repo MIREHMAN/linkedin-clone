@@ -1,10 +1,12 @@
 import { DarkMode, Groups, Home, MonochromePhotos, NightShelter, Pages, Settings, Shop, Shop2 } from '@mui/icons-material'
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Switch } from '@mui/material'
 import React from 'react'
 
-const ProfileCol = () => {
+const LeftCol = () => {
   return (
-    <Box flex={1} sx={{display:{xs:'none', md:'block'}}}>
+    <Box flex={1}  sx={{display:{xs:'none', md:'block'}}}>
+      <Box position='fixed'>
+<Paper sx={{mt:2}} >
       <List>
           <ListItem disablePadding>
             <ListItemButton comonent='a' href='#'>
@@ -56,9 +58,10 @@ const ProfileCol = () => {
           </ListItem>
           
           </List>
-          
+          </Paper>
+    </Box>
     </Box>
   )
 }
 
-export default ProfileCol
+export default LeftCol

@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Box>
+    <Box sx={{backgroundColor:'lightgray'}}>
       <Navbar/>
       <Homepage/>
     </Box>

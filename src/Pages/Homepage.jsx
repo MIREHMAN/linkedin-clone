@@ -1,14 +1,14 @@
 import { Container, Stack } from '@mui/material'
 import React from 'react'
-import ProfileCol from '../components/ProfileCol'
 import FeedCol from '../components/FeedCol'
 import RecommendationCol from '../components/RecommendationCol'
+import LeftCol from '../components/LeftCol'
 
 const Homepage = () => {
   return (
     <Container >
     <Stack direction='row' spacing={4} justifyContent='space-around'>
-        <ProfileCol/>
+        <LeftCol/>
         <FeedCol/>
         <RecommendationCol/>
     </Stack>

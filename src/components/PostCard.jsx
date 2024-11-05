@@ -1,4 +1,4 @@
-import { ChatBubbleOutline, Favorite, MoreHoriz, MoreVert, Share } from "@mui/icons-material";
+import { ChatBubbleOutline, Favorite, MoreHoriz,  Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardMedia,
   Divider,
-  Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -16,7 +15,7 @@ import IconButton from "@mui/material/IconButton";
 const PostCard = () => {
   const RandomImage = "https://picsum.photos/200";
   return (
-    <Card fullWidth sx={{ mb: 2 }}>
+    <Card sx={{mb:2}} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -41,13 +40,13 @@ const PostCard = () => {
       </CardContent>
       <CardMedia
         component="img"
-        height="400"
+        height="300"
         image={RandomImage}
-        alt="Paella dish"
+        alt="Post"
       />
       <Divider sx={{mt:1}}/>
-      <CardActions disableSpacing>
-        <Stack direction='row' spacing={3}>
+      <CardActions >
+      
          <IconButton>
          <Favorite />
           </IconButton> 
@@ -60,7 +59,7 @@ const PostCard = () => {
         <Share />
         </IconButton> 
         
-        </Stack>
+        
       </CardActions>
     </Card>
   );
