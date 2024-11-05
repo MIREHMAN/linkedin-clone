@@ -18,8 +18,8 @@ const PostCard = () => {
     <Card  sx={{mb:1, width:'100%'}} >
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-            R
+          <Avatar sx={{ bgcolor: "red" }} aria-label="user">
+            M
           </Avatar>
         }
         action={

@@ -6,7 +6,7 @@ const LeftCol = () => {
   return (
     <Box flex={1}  sx={{display:{xs:'none', md:'block'}}}>
       <Box position='fixed'>
-<Paper sx={{m:2}} >
+<Paper  >
       <List>
           <ListItem disablePadding>
             <ListItemButton comonent='a' href='#'>
