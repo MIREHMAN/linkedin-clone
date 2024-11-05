@@ -3,6 +3,7 @@ import { BubbleChart, ChatBubble, ChatSharp, LinkedIn, Mail, Notifications, Sear
 import { AppBar, Avatar, Badge, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Search from "./Search";
+import Profile from '../assets/Profile_Img.jpg'
 
 const MyToolbar=styled(Toolbar)({
     display:'flex',
@@ -15,7 +16,10 @@ const IconBox=styled(IconButton)({
   color:'white'
 })
 
-
+const userMenu=()=>{
+  return
+  
+}
 
 const Navbar = () => {
     const [open,setOpen]=useState(false)
@@ -42,7 +46,7 @@ const Navbar = () => {
             </Badge>
         </IconBox>
         <IconButton >
-            <Avatar onClick={e=>setOpen(true)}/>
+            <Avatar src={Profile} onClick={e=>setOpen(true)}/>
         </IconButton>
         
        
@@ -51,8 +55,8 @@ const Navbar = () => {
         
       </MyToolbar>
       <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
+        id="positioned-user-menu"
+        aria-labelledby="positioned-user-button"
         open={open}
         onClose={e=>setOpen(false)}
         anchorOrigin={{
