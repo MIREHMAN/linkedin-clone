@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
-import { BubbleChart, ChatBubble, ChatSharp, LinkedIn, Mail, Notifications, SearchRounded } from "@mui/icons-material";
+import { BubbleChart,  Mail,  SearchRounded } from "@mui/icons-material";
 import { AppBar, Avatar, Badge, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Search from "./Search";
 import Profile from '../assets/Profile_Img.jpg'
+import Notifications from "./Notifications";
 
 const MyToolbar=styled(Toolbar)({
     display:'flex',
     justifyContent:'space-between'
 });
-const IconBox=styled(IconButton)({
+export const IconBox=styled(IconButton)({
   border:'1px solid lightgray',
   padding:3,
   borderRadius:8,
@@ -35,11 +36,7 @@ const Navbar = () => {
         <IconBox>
         <SearchRounded/>
         </IconBox>
-        <IconBox> 
-            <Badge badgeContent={4} variant="small" color="secondary">
-                <Notifications/>
-            </Badge>
-        </IconBox>
+       <Notifications/>
         <IconBox>
             <Badge badgeContent={3} color="secondary">
                 <Mail/>
